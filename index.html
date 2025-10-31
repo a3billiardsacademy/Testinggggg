@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Md Maaz Alam — Creative Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0f6cff; /* blue */
+      --muted:#6b7280;
+      --bg:#0f1724;
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1200px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial; color:#e6eef8; background:linear-gradient(180deg,#071025 0%, #071825 60%); -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--maxw); margin:0 auto; padding:28px}
+
+    /* nav */
+    header{backdrop-filter:blur(6px); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; margin:18px;}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:12px 18px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:56px; height:56px; background:linear-gradient(135deg,var(--accent), #7b61ff); display:flex; align-items:center; justify-content:center; border-radius:10px; font-family:Khand, sans-serif; font-size:18px}
+    .brand h1{margin:0; font-size:18px}
+    nav a{margin-left:18px; color:var(--muted); font-weight:600}
+    .cta{background:var(--accent); color:#fff; padding:10px 14px; border-radius:10px; font-weight:600}
+
+    /* hero */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center; padding:56px 0}
+    .hero-left h2{font-family:Khand, sans-serif; font-size:44px; margin:0 0 12px}
+    .hero-left p{color:var(--muted); margin:0 0 18px}
+    .hero-actions{display:flex; gap:12px}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06); padding:10px 14px; border-radius:10px; color:var(--muted)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:12px}
+
+    /* services */
+    .services{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:36px 0}
+    .service{padding:18px; border-radius:12px; background:var(--glass)}
+    .service h4{margin:8px 0}
+    .muted{color:var(--muted)}
+
+    /* portfolio */
+    .portfolio{margin:36px 0}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .work{height:160px; border-radius:10px; overflow:hidden; position:relative}
+    .work img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s}
+    .work:hover img{transform:scale(1.06)}
+    .work .overlay{position:absolute; inset:0; display:flex; align-items:flex-end; padding:12px; background:linear-gradient(180deg, transparent, rgba(0,0,0,0.45))}
+
+    /* about */
+    .about{display:flex; gap:28px; align-items:center; margin:36px 0}
+    .about img{width:280px; border-radius:12px; object-fit:cover}
+
+    /* contact */
+    .contact{display:grid; grid-template-columns:1fr 380px; gap:18px; margin:36px 0}
+    form{display:flex; flex-direction:column; gap:12px}
+    input,textarea{background:transparent; border:1px solid rgba(255,255,255,0.06); padding:12px; border-radius:10px; color:inherit}
+    textarea{min-height:120px}
+
+    footer{border-top:1px solid rgba(255,255,255,0.03); padding:28px 0; color:var(--muted); margin-top:28px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .about{flex-direction:column}
+      .contact{grid-template-columns:1fr}
+      nav a{display:none}
+    }
+    @media (max-width:460px){
+      .services{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .logo{width:44px; height:44px; font-size:16px}
+      .hero-left h2{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MA</div>
+        <div>
+          <h1>Md Maaz Alam</h1>
+          <div style="font-size:12px; color:var(--muted)">Creative Services & Digital Design</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="https://wa.me/917867860716" target="_blank">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <h2>Designs that get noticed.<br><span style="color:var(--accent)">Branding, UI, and Digital Products</span></h2>
+        <p class="muted">I build clear, usable design systems and visual brand identities for ambitious businesses and local venues in Bangalore.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#contact">Work with me</a>
+          <a class="btn-ghost" href="#portfolio">See portfolio</a>
+        </div>
+
+        <div style="margin-top:22px; display:flex; gap:12px; color:var(--muted); align-items:center">
+          <div class="card" style="display:flex; gap:12px; align-items:center;">
+            <div style="font-weight:700; font-size:18px">8</div>
+            <div>
+              <div style="font-size:12px; color:var(--muted)">Years experience</div>
+            </div>
+          </div>
+          <div class="card" style="display:flex; gap:12px; align-items:center;">
+            <div style="font-weight:700; font-size:18px">320+</div>
+            <div>
+              <div style="font-size:12px; color:var(--muted)">Projects & sessions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card" style="border-radius:16px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd" alt="profile" style="width:56px; height:56px; border-radius:10px; object-fit:cover">
+          <div>
+            <div style="font-weight:700">Md Maaz Alam</div>
+            <div style="font-size:13px; color:var(--muted)">Founder • Designer • Bangalore</div>
+          </div>
+        </div>
+        <p class="muted" style="font-size:14px">I help small businesses, parlours and studios in Bangalore create strong brand experiences and high-converting landing pages.</p>
+        <div style="margin-top:12px; display:flex; gap:8px">
+          <a class="btn-ghost" href="#contact">Get a quote</a>
+          <a class="btn-ghost" href="https://wa.me/917867860716" target="_blank">WhatsApp</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="services">
+      <h3 style="margin:0 0 12px">Services</h3>
+      <p class="muted" style="margin:0 0 18px">What I offer — clear deliverables, reliable timelines.</p>
+      <div class="services">
+        <div class="service card">
+          <div style="font-weight:700">Brand Identity</div>
+          <div class="muted">Logo design, brand guidelines, print assets and shop signage.</div>
+        </div>
+        <div class="service card">
+          <div style="font-weight:700">Website & Landing Pages</div>
+          <div class="muted">Responsive landing pages built for conversions and bookings.</div>
+        </div>
+        <div class="service card">
+          <div style="font-weight:700">UI / Product Design</div>
+          <div class="muted">Design systems, wireframes and high-fidelity UI for web apps.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <h3 style="margin:0 0 12px">Portfolio</h3>
+      <p class="muted" style="margin:0 0 18px">Selected projects and venue work.</p>
+      <div class="grid">
+        <div class="work"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=efgh" alt="Work 1"><div class="overlay"><div style="font-weight:700">A3 Billiards — Branding</div></div></div>
+        <div class="work"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ijkl" alt="Work 2"><div class="overlay"><div style="font-weight:700">Snooker Booking UI</div></div></div>
+        <div class="work"><img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=mnop" alt="Work 3"><div class="overlay"><div style="font-weight:700">Event Poster & Social</div></div></div>
+        <div class="work"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=qrst" alt="Work 4"><div class="overlay"><div style="font-weight:700">Website Redesign</div></div></div>
+        <div class="work"><img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=uvwx" alt="Work 5"><div class="overlay"><div style="font-weight:700">Brand Collateral</div></div></div>
+        <div class="work"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=yzab" alt="Work 6"><div class="overlay"><div style="font-weight:700">Social Campaign</div></div></div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=cdef" alt="Md Maaz Alam">
+      <div>
+        <h3 style="margin:0">About</h3>
+        <p class="muted">I’m Md Maaz Alam — designer and operator based in Bangalore. I’ve worked with venues, small businesses and local brands to improve their visual identity and grow bookings. I keep designs practical and focused on measurable results.</p>
+        <ul class="muted">
+          <li>Brand strategy & identity</li>
+          <li>Website design & landing pages</li>
+          <li>Print and social assets</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h3 style="margin:0 0 12px">Get in touch</h3>
+        <p class="muted" style="margin:0 0 18px">Tell me about your project. Send a brief and I’ll reply with next steps.</p>
+        <form onsubmit="event.preventDefault(); window.open('https://wa.me/917867860716?text=' + encodeURIComponent('Hi Maaz, I\'d like to discuss a project: ' + (document.getElementById('msg').value||'')) )">
+          <input placeholder="Your name" required>
+          <input placeholder="Email or phone" required>
+          <textarea id="msg" placeholder="Brief project summary"></textarea>
+          <div style="display:flex; gap:8px">
+            <button class="cta" type="submit">Message on WhatsApp</button>
+            <button class="btn-ghost" type="button" onclick="alert('Thanks — I will get back to you soon')">Send (demo)</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="card">
+        <h4 style="margin:0 0 12px">Visit</h4>
+        <div style="font-size:14px" class="muted">1st Floor, Tavarekere Main Rd, Bangalore</div>
+        <h4 style="margin:18px 0 8px">Contact</h4>
+        <div style="font-weight:700">+91 78678 60716</div>
+        <div style="margin-top:12px;" class="muted">Or message on WhatsApp using the button in the header.</div>
+      </aside>
+    </section>
+
+    <footer>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px">
+        <div>© <strong>Md Maaz Alam</strong> — All rights reserved</div>
+        <div style="color:var(--muted)">Designed for A3 Billiards & Snooker clients</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // small helper for mobile menu later
+  </script>
+</body>
+</html>
